@@ -1,4 +1,4 @@
-//second largest element in the array without sorting 
+//second largest element in the array without sorting
 #include <bits/stdc++.h>
 using namespace std;
 
@@ -37,7 +37,7 @@ int secondLargest_OPTIMAL(const vector<int>& a) {
 
 int main() {
   vector<int> a = {1, 3, 0, 3, 9, 5};
-  int x = secondLargest_OPTIMAL(a); 
+  int x = secondLargest_OPTIMAL(a);
   cout<<x;
   return 0;
 }
