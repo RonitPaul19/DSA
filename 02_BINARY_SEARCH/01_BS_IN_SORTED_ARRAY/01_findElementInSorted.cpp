@@ -2,7 +2,7 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-int BS(vector<int> a, int x) {
+int BS(vector<int> a, int x) { // O(log n)
   int low = a[0];
   int high = a[a.size()-1];
 
