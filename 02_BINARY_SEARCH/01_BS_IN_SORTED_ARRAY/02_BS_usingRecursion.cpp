@@ -18,6 +18,7 @@ int BS_recursion(vector<int> a, int target, int low, int high) {
 
 int main() {
   vector<int> a = {1, 2, 4, 6, 9, 10};
-  BS_recursion(a, 9, 0, 5);
+  int x = BS_recursion(a, 9, 0, 5);
+  cout<<x;
   return 0;
 }
