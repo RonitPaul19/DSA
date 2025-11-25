@@ -2,29 +2,35 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-int BS(vector<int> a, int x) { // O(log n)
-  int low = a[0];
-  int high = a[a.size()-1];
+int BS(vector<int> a, int x)
+{ // O(log n)
+  int low = 0;
+  int high = a.size() - 1;
 
-  while(low <= high) {
-    int mid = (low+high)/2;
+  while (low <= high)
+  {
+    int mid = (low + high) / 2;
 
-    if (a[mid] == x) {
+    if (a[mid] == x)
+    {
       return mid;
     }
-    else if(x > a[mid]) {
+    else if (x > a[mid])
+    {
       low = mid + 1;
     }
-    else {
-      high = mid -1;
+    else
+    {
+      high = mid - 1;
     }
   }
   return -1;
 }
 
-int main() {
+int main()
+{
   vector<int> a = {1, 2, 4, 6, 9, 10};
   int x = BS(a, 10);
-  cout<<x;
+  cout << x;
   return 0;
 }

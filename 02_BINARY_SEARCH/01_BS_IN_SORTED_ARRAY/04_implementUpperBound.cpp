@@ -23,8 +23,8 @@ int upperBound(vector<int> a, int target) {
 }
 
 int upperBound_CP(vector<int>a, int target) {
-  int lb = upper_bound(a.begin(), a.end(), target) - a.begin();
-  return lb;
+  int ub = upper_bound(a.begin(), a.end(), target) - a.begin();
+  return ub;
 }
 
 int main() {
