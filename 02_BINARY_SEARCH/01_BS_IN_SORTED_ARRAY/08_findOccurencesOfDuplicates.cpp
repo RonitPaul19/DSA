@@ -42,7 +42,7 @@ int lastPos(vector<int> &a, int x)
   return ans;
 }
 
-int countOccurrences(vector<int> a, int x)
+int countOccurences(vector<int> a, int x)
 {
   int first = firstPos(a, x);
   if (first == -1)
@@ -55,7 +55,7 @@ int main()
 {
   vector<int> a = {1, 2, 2, 3, 3, 3, 4, 4, 4, 4, 5, 5, 5, 5, 5};
   int x = 4;
-  int ans = countOccurrences(a, x);
+  int ans = countOccurences(a, x);
   cout << ans;
   return 0;
 }
