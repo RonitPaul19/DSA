@@ -28,7 +28,7 @@ Node* convertArr2LL(vector<int>& arr) {
     return head;
 }
 
-// Remove head node
+// Remove head node of a linked list
 Node* removeHead(Node* head) {
     if (head == nullptr) return head;
 
@@ -51,9 +51,13 @@ void print(Node* head) {
 
 int main() {
     vector<int> arr = {12, 5, 8, 7};
-
     Node* head = convertArr2LL(arr);
-    head = removeHead(head); 
+
+    print(head);
+
+    cout<<"Removing the head of the linked list \n ";
+    head = removeHead(head);
+
     print(head);
 
     return 0;
