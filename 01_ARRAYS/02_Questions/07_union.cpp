@@ -2,8 +2,7 @@
 using namespace std;
 
 // BRUTE FORCE APPROACH
-vector<int> UNION_Brute(vector<int> a, vector<int> b)
-{
+vector<int> UNION_Brute(vector<int> a, vector<int> b) {
   set<int> st;
   for (int el : a)
     st.insert(el);
@@ -61,8 +60,7 @@ time complexity = O(n1 + n2)
 space complexity = O(n1 + n2) // for returning the array
 */
 
-int main()
-{
+int main() {
   vector <int> arr1 = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
   vector <int> arr2 = {2, 3, 4, 4, 5, 11, 12};
 

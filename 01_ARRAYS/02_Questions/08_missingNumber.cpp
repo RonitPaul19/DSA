@@ -6,12 +6,10 @@ int findMissing_BRUTE(vector<int> a, int n) {
   int sumOfN = 0;
   int sumOfArray = 0;
 
-  for (int i = 1; i <= n; i++)
-  {
+  for (int i = 1; i <= n; i++) {
     sumOfN += i;
   }
-  for (int i = 0; i < a.size(); i++)
-  {
+  for (int i = 0; i < a.size(); i++) {
     sumOfArray += a[i];
   }
 
