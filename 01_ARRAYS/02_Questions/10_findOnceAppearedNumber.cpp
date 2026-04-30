@@ -1,47 +1,69 @@
-//find a number that appears ones and other number twice
+// find the number that appers once, given that the other numbers appears twice
 #include <bits/stdc++.h>
 using namespace std;
 
-int getSingleElement_BRUTE(vector<int> a) { // O(n^2)
-  for (int i = 0; i < a.size(); i++)
-  {
-    int num = a[i];
-    int count = 0;
-    for (int j = 0; j < a.size(); j++)
-    {
-      if (a[j] == num)
-        count++;
+int fn_BRUTE(vector<int> arr) {
+  for (int i = 0; i < arr.size(); i++) {
+    int num = arr[i];
+    int cnt = 0;
+    for (int j = 0; j < arr.size(); j++) {
+      if (arr[j] == num) {
+        cnt++;
+      }
     }
-    if (count == 1) return num;
+    if (cnt == 1) return num;
   }
   return -1;
 }
 
-int getSingleElement_BETTER(vector<int> a) { // hashing
-  // find the maximum element from the array
-  int maxi = 0;
-  for (int i = 0; i < a.size(); i++) { // O(n)
-    maxi = max(maxi, a[i]);
+int fn_BETTER(vector<int> arr) {
+  // first find the maximum element in the array
+  int maxi = arr[0];
+  for (int i = 1; i < arr.size(); i++) {
+    maxi = max(maxi, arr[i]);
   }
-  int hash[maxi] = {0};
-  for (int i = 0; i < a.size(); i++) // O(n)
-  {
-    hash[a[i]]++;
+
+  // create a hash array of size 1 more than the maximum element
+  vector<int> hash(maxi + 1);
+
+  for (int i = 0; i < arr.size(); i++) {
+    hash[arr[i]]++;
   }
-  for (int i = 0; i < a.size(); i++) // O(n)
-  {
-    if(hash[a[i]] == 1) {
-      return a[i];
-    }
+
+  // check which index stores the value 1 and that index will be the answer
+  for (int i = 0; i < hash.size(); i++) {
+    if (hash[i] == 1) return i;
   }
+
   return -1;
 }
 
-int main()
-{
+int fn_OPTIMAL(vector<int> arr) {
+  int xorr = 0;
 
-  vector<int> a = {4, 4, 3, 1, 2, 1, 2};
-  int x = getSingleElement_BRUTE(a);
-  cout<<x;
+  /*
+
+  = 1 ^ 1 ^ 2 ^ 3 ^ 3 ^ 4 ^ 4
+    -----   -   -----   -----
+
+  =   0   ^ 2 ^   0   ^   0
+
+  =   2  **this is the answer
+
+  */
+
+  for (int i = 0; i < arr.size(); i++) {
+    xorr ^= arr[i];
+  }
+
+  return xorr;
+}
+
+int main() {
+  vector<int> arr = {1, 1, 2, 3, 3, 4, 4};  // ans = 2
+
+  int result = fn_BRUTE(arr);
+  cout << result;
+
   return 0;
 }
