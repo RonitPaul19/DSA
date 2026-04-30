@@ -3,22 +3,83 @@
 using namespace std;
 
 // left rotate an array by 1 place
-void leftRotateBy1(vector<int> &a) {
-  int n = a.size();
-  int temp = a[0];
-  for (int i = 1; i < n; i++) { // start from 1 so that we can store this value in the previous index
-    a[i - 1] = a[i];
+vector<int> leftRotate1_BRUTE(vector<int>& arr) {
+  int n = arr.size();
+  if (n == 0) return arr;
+
+  vector<int> temp(n);
+
+  for (int i = 1; i < n; i++) {
+    temp[i - 1] = arr[i];
   }
-  a[n - 1] = temp;
+
+  temp[n - 1] = arr[0];
+
+  return temp;
 }
 
-// left rotate an array by 'd' places
-void leftRotateByD(vector<int> &a, int d) {
-  int n = a.size();
-  d = d % n;
-  reverse(a.begin(), a.begin() + d);
-  reverse(a.begin() + d, a.begin() + n);
-  reverse(a.begin(), a.begin() + n);
+void leftRotate1_OPTIMAL(vector<int>& arr) {
+  int temp = arr[0];
+
+  for (int i = 1; i < arr.size(); i++) {
+    arr[i - 1] = arr[i];
+  }
+
+  arr[arr.size() - 1] = temp;
+}
+
+// TC - O(k + n - k + k) = O(n + k)
+// SC - O(k)
+void leftRotateByK_BRUTE(vector<int>& arr, int k) {
+  int n = arr.size();
+  if (n == 0) return;
+  k = k % n;
+
+  vector<int> temp(k);
+
+  for (int i = 0; i < k; i++) {  // O(k)
+    temp[i] = arr[i];
+  }
+
+  for (int i = k; i < n; i++) {  // O(n-k)
+    arr[i - k] = arr[i];
+  }
+
+  // int j = 0;
+  // for (int i = n - k; i < n; i++) {
+  //   arr[i] = temp[j];
+  //   j++;
+  // }
+
+  // MATHEMATICALLY
+  for (int i = n - k; i < n; i++) {  // O(k)
+    arr[i] = temp[i - (n - k)];
+  }
+}
+
+void reverse(vector<int>& arr, int start, int end) {
+  while (start < end) {
+    swap(arr[start], arr[end]);
+    start++;
+    end--;
+  }
+}
+
+// left rotate optimal approach
+// arr = {1, 2, 3, 4, 5, 6} ; int k = 3
+// part 1 = {1, 2, 3} -> rotate -> {3, 2, 1}
+// part 2 = {4, 5, 6} -> rotate -> {6, 5, 4}
+// join part 1 and part 2 = {3, 2, 1, 6, 5, 4}
+// rotate the entire array -> {4, 5, 6, 1, 2, 3} -> This is the answer :)
+void leftRotateByK_OPTIMAL(vector<int>& arr, int k) {
+  int n = arr.size();
+  if (n == 0) return;
+
+  k = k % n;
+
+  reverse(arr, 0, k - 1);
+  reverse(arr, k, n - 1);
+  reverse(arr, 0, n - 1);
 }
 
 int main() {
@@ -29,7 +90,7 @@ int main() {
   }
   cout << "\n";
 
-  leftRotateBy1(a);
+  leftRotate1_OPTIMAL(a);
 
   cout << "after left rotate by 1" << "\n";
   for (int el : a) {
@@ -38,7 +99,7 @@ int main() {
   cout << "\n";
 
   int d = 3;
-  leftRotateByD(a, d);
+  leftRotateByK_OPTIMAL(a, d);
   cout << "After rotating the array by " << d << " places";
   for (int el : a) {
     cout << el << " ";
