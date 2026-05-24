@@ -20,26 +20,20 @@ using namespace std;
 // ----------------------------------------------------------------------------
 // 🔴 1. BRUTE FORCE (O(n^3))
 // ----------------------------------------------------------------------------
-int longestSubarrayWithSum_BRUTE(vector<int> arr, int k)
-{
+int longestSubarrayWithSum_BRUTE(vector<int> arr, int k) {
   int len = 0;
 
   // generate all subarrays
-  for (int i = 0; i < arr.size(); i++)
-  {
-    for (int j = i; j < arr.size(); j++)
-    {
-
+  for (int i = 0; i < arr.size(); i++) {
+    for (int j = i; j < arr.size(); j++) {
       // calculate sum for subarray [i...j]
       int sum = 0;
-      for (int t = i; t <= j; t++)
-      {
+      for (int t = i; t <= j; t++) {
         sum += arr[t];
       }
 
       // check condition
-      if (sum == k)
-      {
+      if (sum == k) {
         len = max(len, j - i + 1);
       }
     }
@@ -51,22 +45,17 @@ int longestSubarrayWithSum_BRUTE(vector<int> arr, int k)
 // ----------------------------------------------------------------------------
 // 🟡 2. BRUTE OPTIMIZED (O(n^2))
 // ----------------------------------------------------------------------------
-int longestSubarrayWithSum_BRUTE_optimized(vector<int> arr, int k)
-{
+int longestSubarrayWithSum_BRUTE_optimized(vector<int> arr, int k) {
   int len = 0;
 
-  for (int i = 0; i < arr.size(); i++)
-  {
-    int sum = 0; // reset sum for new starting point
+  for (int i = 0; i < arr.size(); i++) {
+    int sum = 0;  // reset sum for new starting point
 
-    for (int j = i; j < arr.size(); j++)
-    {
-
+    for (int j = i; j < arr.size(); j++) {
       // instead of recalculating sum, keep adding
       sum += arr[j];
 
-      if (sum == k)
-      {
+      if (sum == k) {
         len = max(len, j - i + 1);
       }
     }
@@ -102,28 +91,24 @@ If rem exists in map → we found a subarray
 ================================================================================
 */
 
-int longestSubarrayWithSum_BETTER(vector<int> arr, int k)
-{
+int longestSubarrayWithSum_BETTER(vector<int> arr, int k) {
   unordered_map<long long, int> preSumMap;
 
   long long sum = 0;
   int maxLen = 0;
 
-  for (int i = 0; i < arr.size(); i++)
-  {
+  for (int i = 0; i < arr.size(); i++) {
     sum += arr[i];
 
     // case 1: subarray from 0 → i
-    if (sum == k)
-    {
+    if (sum == k) {
       maxLen = max(maxLen, i + 1);
     }
 
     // case 2: subarray in middle
     long long rem = sum - k;
 
-    if (preSumMap.find(rem) != preSumMap.end())
-    {
+    if (preSumMap.find(rem) != preSumMap.end()) {
       int len = i - preSumMap[rem];
       maxLen = max(maxLen, len);
     }
@@ -139,8 +124,7 @@ int longestSubarrayWithSum_BETTER(vector<int> arr, int k)
 
     ✅ Correct:
     */
-    if (preSumMap.find(sum) == preSumMap.end())
-    {
+    if (preSumMap.find(sum) == preSumMap.end()) {
       preSumMap[sum] = i;
     }
   }
@@ -170,30 +154,25 @@ Because all elements are positive:
 ================================================================================
 */
 
-int longestSubarrayWithSum_Optimal(vector<int> arr, int k)
-{
+int longestSubarrayWithSum_Optimal(vector<int> arr, int k) {
   int left = 0, right = 0;
   long long sum = 0;
   int maxLen = 0;
 
   int n = arr.size();
 
-  while (right < n)
-  {
-
+  while (right < n) {
     // expand window
     sum += arr[right];
 
     // shrink window if sum > k
-    while (left <= right && sum > k)
-    {
+    while (left <= right && sum > k) {
       sum -= arr[left];
       left++;
     }
 
     // check condition
-    if (sum == k)
-    {
+    if (sum == k) {
       maxLen = max(maxLen, right - left + 1);
     }
 
@@ -217,8 +196,7 @@ int longestSubarrayWithSum_Optimal(vector<int> arr, int k)
 ================================================================================
 */
 
-int main()
-{
+int main() {
   vector<int> arr = {1, 2, 3, 1, 1, 1, 1, 4, 2, 3};
   int k = 4;
 
