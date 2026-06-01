@@ -79,7 +79,7 @@ void SORT_BETTER(vector<int>& arr) {
 }
 
 // ---------------------------------------------------------------------------
-// 🟢 OPTIMAL SOLUTION (DNF - ONE PASS)
+// 🟢 OPTIMAL SOLUTION (Dutch National Flag - ONE PASS)
 // ---------------------------------------------------------------------------
 /*
 👉 TC = O(n)
