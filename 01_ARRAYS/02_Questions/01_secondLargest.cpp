@@ -18,19 +18,17 @@ int secondLargest(vector<int> a) {
   return sLargest;
 }
 
-int secondLargest_OPTIMAL(const vector<int> &a) {
-  if (a.size() < 2)
-    return -1; // or handle error
+int secondLargest_OPTIMAL(const vector<int>& a) {
+  if (a.size() < 2) return -1;  // or handle error
 
   int largest = INT_MIN;
   int sLargest = INT_MIN;
 
   for (int num : a) {
     if (num > largest) {
-      sLargest = largest; // old largest becomes second largest
+      sLargest = largest;  // old largest becomes second largest
       largest = num;
-    }
-    else if (num > sLargest && num < largest) {
+    } else if (num > sLargest && num < largest) {
       sLargest = num;
     }
   }
