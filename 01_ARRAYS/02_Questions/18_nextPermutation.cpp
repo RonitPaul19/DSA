@@ -37,6 +37,10 @@ vector<int> nextGreaterPermutation(vector<int> a) {
 }
 
 int main() {
-  
+  vector<int> a = {1, 2, 9, 3, 2, 7, 8};
+  vector<int> result = nextGreaterPermutation(a);
+
+  for (auto el : result) cout << el << " ";
+
   return 0;
 }
