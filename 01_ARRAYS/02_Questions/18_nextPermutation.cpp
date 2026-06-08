@@ -5,9 +5,7 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-void nextGreaterPermutation_BETTER(vector<int> a) { next_permutation(a.begin(), a.end()); }
-
-vector<int> nextGreaterPermutation(vector<int> a) {
+vector<int> nextPermutation(vector<int> a) {
   int ind = -1;
   int n = a.size();
 
@@ -32,15 +30,20 @@ vector<int> nextGreaterPermutation(vector<int> a) {
 
   reverse(a.begin() + ind + 1, a.end());  // remember that we do not have to reverse the entire
                                           // array, reverse only the part after the breakpoint
+  return a;
+}
 
+vector<int> nextGreaterPermutation_BETTER(vector<int> a) {
+  next_permutation(a.begin(), a.end());
   return a;
 }
 
 int main() {
   vector<int> a = {1, 2, 9, 3, 2, 7, 8};
-  vector<int> result = nextGreaterPermutation(a);
+  vector<int> result = nextPermutation(a);
 
   for (auto el : result) cout << el << " ";
+  cout << '\n';
 
   return 0;
 }
