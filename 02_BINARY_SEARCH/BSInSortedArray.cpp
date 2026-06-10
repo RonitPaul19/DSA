@@ -32,3 +32,22 @@ int main() {
 
   return 0;
 }
+
+/*
+
+   HOW TO AVOID OVERFLOW CASE IN BINARY SEARCH ? :-
+
+   if we take -
+
+   mid = (low + high) / 2 , THEN IF, low + high = INT_MAX + INT_MAX then integer OVERFLOW
+
+   How to avoid -
+
+   => mid = (low + high) / 2
+   => mid = (low - low + low + high) / 2
+   => mid = (2*low + high - low) / 2
+
+      --------------------------------------
+   => |   mid = low + (high - low) / 2    |     ** USE THIS FORMULA**
+      -------------------------------------
+ */
