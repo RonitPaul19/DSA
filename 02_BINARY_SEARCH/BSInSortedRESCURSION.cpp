@@ -2,6 +2,7 @@
 using namespace std;
 
 // recursive code for the binary search algorithm
+// Time Complexity (log n)
 int bs_recurse(vector<int>& a, int low, int high, int target) {
   if (low > high) {
     return -1;
