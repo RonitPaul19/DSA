@@ -1,0 +1,516 @@
+PHASE 0: C++ FOR DSA (Skip if Comfortable)
+
+  STL Vectors
+  Pair
+  String
+  Stack
+  Queue
+  Deque
+  Priority Queue
+  Set / Multiset
+  Map / Unordered Map
+
+  Algorithms Library
+    sort()
+    lower_bound()
+    upper_bound()
+    binary_search()
+
+
+PHASE 1: DATA STRUCTURE FOUNDATIONS
+
+  1. Arrays
+
+    Learn:
+      - Traversal
+      - Insert/Delete
+      - Rotation
+      - Subarrays
+
+    Complexities:
+      - Access: O(1)
+      - Search: O(n)
+
+    Problems:
+      - Largest Element
+      - Second Largest
+      - Rotate Array
+      - Move Zeroes
+
+
+  2. Strings
+
+    Learn:
+      - String Operations
+      - Character Frequencies
+      - Palindromes
+
+    Problems:
+      - Reverse String
+      - Valid Palindrome
+      - Anagram
+
+
+  3. Hashing
+
+    Learn:
+      - Hash Map
+      - Hash Set
+      - Frequency Count
+
+    Problems:
+      - Two Sum
+      - Frequency Counting
+      - Longest Consecutive Sequence
+
+
+  4. Linked Lists
+
+    Learn:
+      - Singly Linked List
+      - Doubly Linked List
+      - Circular Linked List
+
+    Operations:
+      - Insert
+      - Delete
+      - Reverse
+
+    Problems:
+      - Reverse List
+      - Detect Cycle
+      - Middle Node
+
+
+  5. Stack
+
+    Learn:
+      - LIFO
+      - Implementation
+
+    Problems:
+      - Valid Parentheses
+      - Min Stack
+      - Next Greater Element
+
+
+  6. Queue & Deque
+
+    Learn:
+      - FIFO
+      - Circular Queue
+      - Deque
+
+    Problems:
+      - Implement Queue
+      - Sliding Window Maximum
+
+
+  7. Heap / Priority Queue
+
+    Learn:
+      - Min Heap
+      - Max Heap
+
+    Problems:
+      - K Largest Elements
+      - K Closest Elements
+      - Median Stream
+
+
+  8. Trees
+
+    Learn:
+      - Node Structure
+      - DFS
+      - BFS
+
+    Problems:
+      - Tree Traversals
+      - Height of Tree
+      - Diameter of Tree
+
+
+  9. BST (Binary Search Tree)
+
+    Learn:
+      - Insert
+      - Delete
+      - Search
+
+    Problems:
+      - Validate BST
+      - Kth Smallest Element
+
+
+  10. Trie
+
+    Learn:
+      - Prefix Storage
+      - Search
+
+    Problems:
+      - Implement Trie
+      - Word Search
+
+
+  11. Graph
+
+    Learn:
+      - Adjacency List
+      - Adjacency Matrix
+
+    Problems:
+      - BFS
+      - DFS
+      - Connected Components
+
+
+  12. DSU (Union Find)
+
+    Learn:
+      - Path Compression
+      - Union by Rank
+
+    Problems:
+      - Number of Provinces
+      - Redundant Connection
+
+
+PHASE 2: PATTERN MASTERY (MOST IMPORTANT)
+
+  Pattern 1: Two Pointers
+
+    Problems:
+      - Pair Sum
+      - Remove Duplicates
+      - Container With Most Water
+
+    Target:
+      - 20–30 Questions
+
+
+  Pattern 2: Sliding Window
+
+    Problems:
+      - Longest Substring Without Repeating Characters
+      - Maximum Sum Subarray of Size K
+
+    Target:
+      - 20–30 Questions
+
+
+  Pattern 3: Prefix Sum
+
+    Problems:
+      - Range Sum Query
+      - Subarray Sum Equals K
+
+    Target:
+      - 15 Questions
+
+
+  Pattern 4: Hashing
+
+    Problems:
+      - Two Sum
+      - Group Anagrams
+      - Longest Consecutive Sequence
+
+    Target:
+      - 25 Questions
+
+
+  Pattern 5: Binary Search
+
+    Learn:
+      - Classical Binary Search
+      - Binary Search on Answer
+
+    Problems:
+      - Search Insert Position
+      - Aggressive Cows
+      - Allocate Books
+
+    Target:
+      - 30 Questions
+
+
+  Pattern 6: Sorting-Based Patterns
+
+    Problems:
+      - Merge Intervals
+      - Meeting Rooms
+
+    Target:
+      - 20 Questions
+
+
+  Pattern 7: Recursion
+
+    Learn:
+      - Call Stack
+      - Recursive Thinking
+
+    Problems:
+      - Factorial
+      - Power
+      - Fibonacci
+
+    Target:
+      - 15 Questions
+
+
+  Pattern 8: Backtracking
+
+    Problems:
+      - Subsets
+      - Permutations
+      - N Queens
+
+    Target:
+      - 20 Questions
+
+
+  Pattern 9: Divide & Conquer
+
+    Problems:
+      - Merge Sort
+      - Quick Sort
+      - Inversion Count
+
+    Target:
+      - 15 Questions
+
+
+  Pattern 10: Greedy
+
+    Problems:
+      - Activity Selection
+      - Jump Game
+
+    Target:
+      - 25 Questions
+
+
+  Pattern 11: Linked List Patterns
+
+    Problems:
+      - Reverse Linked List
+      - Fast & Slow Pointer
+      - Merge Lists
+
+    Target:
+      - 20 Questions
+
+
+  Pattern 12: Stack Patterns
+
+    Problems:
+      - Monotonic Stack
+      - Largest Rectangle in Histogram
+      - Stock Span
+
+    Target:
+      - 25 Questions
+
+
+  Pattern 13: Queue Patterns
+
+    Problems:
+      - Monotonic Queue
+      - BFS
+
+    Target:
+      - 15 Questions
+
+
+  Pattern 14: Heap Patterns
+
+    Problems:
+      - Top K Elements
+      - K-Way Merge
+
+    Target:
+      - 20 Questions
+
+
+  Pattern 15: Tree Patterns
+
+    Learn:
+      - DFS
+      - BFS
+      - Tree DP
+
+    Problems:
+      - Diameter
+      - LCA
+      - Path Sum
+
+    Target:
+      - 40 Questions
+
+
+  Pattern 16: BST Patterns
+
+    Problems:
+      - Kth Smallest Element
+      - Inorder Successor
+
+    Target:
+      - 15 Questions
+
+
+  Pattern 17: Trie Patterns
+
+    Problems:
+      - Word Search
+      - XOR Trie
+
+    Target:
+      - 15 Questions
+
+
+PHASE 3: GRAPHS
+
+  BFS
+
+    Problems:
+      - Shortest Path in Unweighted Graph
+      - Grid BFS
+
+
+  DFS
+
+    Problems:
+      - Connected Components
+      - Cycle Detection
+
+
+  Topological Sort
+
+    Problems:
+      - Course Schedule
+
+
+  Shortest Path Algorithms
+
+    Algorithms:
+      - BFS
+      - 0-1 BFS
+      - Dijkstra
+      - Bellman-Ford
+      - Floyd-Warshall
+
+
+  Minimum Spanning Tree (MST)
+
+    Algorithms:
+      - Kruskal
+      - Prim
+
+
+  Strongly Connected Components (SCC)
+
+    Algorithms:
+      - Kosaraju
+      - Tarjan
+
+
+  Advanced Graphs
+
+    Topics:
+      - Bridges
+      - Articulation Points
+      - Euler Path
+      - Bipartite Graph
+
+
+  Target:
+    - 80–100 Graph Problems
+
+
+PHASE 4: DYNAMIC PROGRAMMING
+
+  DP 1D
+
+    Problems:
+      - Fibonacci
+      - Climbing Stairs
+      - House Robber
+
+
+  DP 2D
+
+    Problems:
+      - Grid Paths
+      - Unique Paths
+
+
+  Knapsack
+
+    Types:
+      - 0/1 Knapsack
+      - Unbounded Knapsack
+
+
+  Subsequence DP
+
+    Problems:
+      - LIS (Longest Increasing Subsequence)
+      - LCS (Longest Common Subsequence)
+
+
+  Interval DP
+
+    Problems:
+      - Matrix Chain Multiplication
+
+
+  Advanced DP
+
+    Topics:
+      - Tree DP
+      - Bitmask DP
+      - Digit DP
+
+
+  Target:
+    - 100+ DP Problems
+
+
+PHASE 5: ADVANCED DATA STRUCTURES
+
+  Segment Tree
+
+    Topics:
+      - Range Sum Queries
+      - Lazy Propagation
+
+
+  Fenwick Tree (BIT)
+
+    Topics:
+      - Prefix Queries
+
+
+  Sparse Table
+
+    Topics:
+      - RMQ (Range Minimum Query)
+
+
+  Mo's Algorithm
+
+  Sqrt Decomposition
+
+
+PHASE 6: COMPETITIVE PROGRAMMING TOPICS
+
+  Number Theory
+  Combinatorics
+  Modular Arithmetic
+  Sieve of Eratosthenes
+  Fast Exponentiation
+  Geometry
+  Game Theory
