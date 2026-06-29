@@ -12,11 +12,14 @@ unordered_map <key, value> var_name
 */
 
 int main() {
+  // ============ Ordered maps ============
   int n;
+  cout << "Enter size of the array :";
   cin >> n;
 
   int arr[n];
 
+  cout << "Enter " << n << " elements of the array : ";
   for (int i = 0; i < n; i++) {
     cin >> arr[i];
   }
@@ -33,8 +36,10 @@ int main() {
   // }
 
   int q;
+  cout << "Enter the number of queries : ";
   cin >> q;
 
+  cout << "Enter " << q << " queries : \n";
   while (q--) {
     int number;
     cin >> number;
