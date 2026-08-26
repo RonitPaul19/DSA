@@ -102,27 +102,35 @@ int main() {
   fourth->next = NULL;
 
   traversal(head);
-  std::cout << std::endl;
+  std::cout << "\n\n";
 
+  // insert 10 at beginning
+  std::cout << "Inserting 10 at the beginning of the linked list\n";
   head = insertAtBeginning(head, 10);
 
   traversal(head);
-  std::cout << std::endl;
+  std::cout << "\n\n";
 
+  // insert 200 at index 2
+  std::cout << "Inserting 200 at index 2 of the linked list\n";
   head = insertAtIndex(head, 200, 2);
 
   traversal(head);
-  std::cout << std::endl;
+  std::cout << "\n\n";
 
+  // insert 20 at end
+  std::cout << "Inserting 20 at the end of the linked list\n";
   head = insertAtEnd(head, 20);
 
   traversal(head);
-  std::cout << std::endl;
+  std::cout << "\n\n";
 
+  // insert 45 after the third node
+  std::cout << "Inserting 45 after the third node\n";
   head = insertAfterNode(head, third, 45);
 
   traversal(head);
-  std::cout << std::endl;
+  std::cout << "\n\n";
 
   return 0;
 }
