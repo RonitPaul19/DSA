@@ -27,13 +27,13 @@ void selectionSort(std::vector<int>& arr) {
 int main() {
   std::vector<int> arr = {1, 3, 6, 2, 4, 5, 9, 8, 7};
 
-  std::cout << "Array before bubble sort : ";
+  std::cout << "Array before : ";
   printArray(arr);
 
-  std::cout << "Preforming insertion sort...\n";
+  std::cout << "Preforming selection sort...\n";
   selectionSort(arr);
 
-  std::cout << "Array after bubble sort : ";
+  std::cout << "Array after : ";
   printArray(arr);
 
   return 0;
